@@ -15,3 +15,12 @@ When you move it outside the grid you get errors.
 I used the set color method
 4.
 The bug dissapears
+
+Exercises Part 2
+1. The role is to tell the bug what the side length of the square it is supposed to walk is.
+2. The role of it is to tell the bug how many steps it has taken is.
+3. so that the bug turns 90 degrees
+4. because it extends bug class
+5. no because it is based on side length
+6. not after it is created
+7. when it reaches the end of a side length
