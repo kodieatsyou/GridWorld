@@ -1,13 +1,13 @@
-package part3;
+package part2;
 
 import info.gridworld.actor.Bug;
 
-public class CircleBug extends Bug{
+public class SpiralBug extends Bug{
 	
 	private int steps;
 	private int sideLength;
 	
-	public CircleBug(int length) {
+	public SpiralBug(int length) {
 		steps = 0;
 		sideLength = length;
 	}
@@ -18,7 +18,9 @@ public class CircleBug extends Bug{
 			steps++;
 		} else {
 			turn();
+			turn();
 			steps = 0;
+			sideLength += 1;
 		}
 	}
 
