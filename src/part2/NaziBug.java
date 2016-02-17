@@ -2,13 +2,13 @@ package part2;
 
 import info.gridworld.actor.Bug;
 
-public class naziBug extends Bug{
+public class NaziBug extends Bug{
 	
 	private int steps;
 	private int sideLength;
 	private boolean isDone = false;
 	
-	public naziBug(int length) {
+	public NaziBug(int length) {
 		steps = 0;
 		sideLength = length;
 	}
@@ -16,17 +16,9 @@ public class naziBug extends Bug{
 	public void act() {
 		if (!isDone) {
 			turn();
-			nMove();
-			turn360();
-			nMove();
-			turn90();
-			nMove();
-			turn90();
-			nMove();
-			turn90();
-			nMove();
-			turn360();
-			nMove();
+			for (int a = 0; a < 4; a++) {
+				arm();
+			}
 			isDone = true;
 		}
 	}
@@ -50,5 +42,28 @@ public class naziBug extends Bug{
 		turn();
 		turn();
 	}
-
+	
+	public void turn180(){ 
+		turn();
+		turn();
+		turn();
+		turn();
+	}
+	
+	public void arm() {;
+		nMove();
+		turn90();
+		nMove();
+		turn180();
+		nMove();
+		turn();
+		turn();
+		turn();
+		turn();
+		turn();
+		turn();
+		nMove();
+		turn();
+		turn();
+	}
 }

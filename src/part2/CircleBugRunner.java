@@ -18,6 +18,8 @@ public class CircleBugRunner {
 		SpiralBug jimmy = new SpiralBug(6);
 		ZBug bobby = new ZBug(6);
 		DancingBug bill = new DancingBug(6, dancingbugTurns);
+		NaziBug hitler = new NaziBug(6);
+		hitler.setColor(Color.RED);
 		alice.setColor(Color.ORANGE);
 		jimmy.setColor(Color.ORANGE);
 		bobby.setColor(Color.ORANGE);
@@ -28,6 +30,7 @@ public class CircleBugRunner {
 		world.add(new Location(5, 4), jimmy);
 		world.add(new Location(2, 4), bobby);
 		world.add(new Location(6, 6), bill);
+		world.add(new Location(9, 9), hitler);
 		world.show();
 	}
 }
