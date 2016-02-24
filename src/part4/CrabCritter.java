@@ -45,7 +45,7 @@ public class CrabCritter extends Critter {
 	 */
 	public ArrayList<Actor> getActors() {
 		ArrayList<Actor> actors = new ArrayList<Actor>();
-		int[] dirs = { Location.AHEAD, Location.HALF_LEFT, Location.HALF_RIGHT };
+		int[] dirs = { Location.AHEAD, Location.HALF_CIRCLE };
 		for (Location loc : getLocationsInDirections(dirs)) {
 			Actor a = getGrid().get(loc);
 			if (a != null)
