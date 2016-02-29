@@ -16,14 +16,16 @@ public class BlusterCritter extends Critter {
 	public ArrayList<Actor> getActors() {
 		ArrayList<Actor> Actors = new ArrayList<Actor>();
 		ArrayList<Location> Locations = new ArrayList<Location>();
-		for(int row = -2; row >= 2; row++) {
-			for(int col = -2; col >= 2; col++) {
-				Locations.add(new Location(getLocation().getRow() + row, getLocation().getCol() +col));
+		for(int row = -2; row <= 2; row++) {
+			for(int col = -2; col <= 2; col++) {
+				Locations.add(new Location(getLocation().getRow() + row, getLocation().getCol() + col));
 			}
 		}
 		for(Location loc : Locations) {
 			if(getGrid().isValid(loc)) {
-				Actors.add(getGrid().get(loc));
+				if(getGrid().get(loc) != null){
+					Actors.add(getGrid().get(loc));
+				}
 			}
 		}
 		return Actors;
